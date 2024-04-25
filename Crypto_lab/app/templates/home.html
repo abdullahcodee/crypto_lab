@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Crypto Lab{% endblock %}
+
+{% block content %}
+<section>
+    <h2>Welcome to Crypto Lab!</h2>
+    <p>This is the home page of Crypto Lab. You can perform various cryptographic operations here.</p>
+    <form id="cipherForm" method="POST">
+        <div class="form-group">
+            <label for="text">Enter text:</label>
+            <textarea id="text" name="text" class="form-control" rows="4" cols="50"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="method">Choose a method:</label>
+            <select id="method" name="method" class="form-control">
+                <option value="atbash">Atbash Cipher</option>
+                <option value="caesar">Caesar Cipher</option>
+                <option value="simple_substitution">Simple Substitution</option>
+                <!-- Add more cipher options here -->
+            </select>
+        </div>
+        <div id="keyField" class="form-group" style="display: none;">
+            <label for="key">Enter key:</label>
+            <input type="text" id="key" name="key" class="form-control">
+        </div>
+        <div id="shiftField" class="form-group" style="display: none;">
+            <label for="shift">Enter shift:</label>
+            <input type="number" id="shift" name="shift" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="action">Choose action:</label>
+            <select id="action" name="action" class="form-control">
+                <option value="encrypt">Encrypt</option>
+                <option value="decrypt">Decrypt</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div id="result" class="mt-5"></div>
+</section>
+{% endblock %}
+<script src="{{ url_for('static', filename='home.js') }}"></script>
+

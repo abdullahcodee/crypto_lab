@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">CryptoLab Admin</a>
+            <button id="navbar-toggler" class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('blog') }}">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('researcher') }}">Researchers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('packages') }}">Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Admin Dashboard</h2>
+        <div class="admin-functions">
+            <h3>User Management</h3>
+            <ul>
+                <li><a href="#">Verify Users</a></li>
+                <li><a href="#">Manage Users</a></li>
+            </ul>
+        </div>
+        <div class="admin-functions">
+            <h3>Package Management</h3>
+            <ul>
+                <li><a href="#">View Packages</a></li>
+                <li><a href="#">Add Package</a></li>
+                <li><a href="#">Remove Package</a></li>
+            </ul>
+        </div>
+        <div class="admin-functions">
+            <h3>Blog & Research Management</h3>
+            <ul>
+                <li><a href="#">Manage Blogs</a></li>
+                <li><a href="#">Manage Researches</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">CryptoLab &copy; 2024</span>
+        </div>
+    </footer>
+</body>
+</html>
