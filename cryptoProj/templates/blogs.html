@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CryptoLab - Blogs</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-image: url('../assets/background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">CryptoLab</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/signin">Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/signup">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="mt-5">Blogs</h1>
+        <div class="card mt-3">
+            <div class="card-body">
+                <h5 class="card-title">Caesar Cipher</h5>
+                <p class="card-text">The Caesar cipher is one of the simplest and most widely known encryption techniques.</p>
+                <a href="#" class="btn btn-primary read-more" data-cipher="caesar">Read More</a>
+            </div>
+        </div>
+        <div class="card mt-3">
+            <div class="card-body">
+                <h5 class="card-title">Vigenere Cipher</h5>
+                <p class="card-text">The Vigenère cipher is a method of encrypting alphabetic text by using a keyword and rearranging the letters based on the keyword.</p>
+                <a href="#" class="btn btn-primary read-more" data-cipher="vigenere">Read More</a>
+            </div>
+        </div>
+        <div class="card mt-3">
+            <div class="card-body">
+                <h5 class="card-title">Playfair Cipher</h5>
+                <p class="card-text">The Playfair cipher is a manual symmetric encryption technique and was the first literal digraph substitution cipher.</p>
+                <a href="#" class="btn btn-primary read-more" data-cipher="playfair">Read More</a>
+            </div>
+        </div>
+        <div class="card mt-3">
+            <div class="card-body">
+                <h5 class="card-title">Rail Fence Cipher</h5>
+                <p class="card-text">The rail fence cipher is a transposition cipher that rearranges the plaintext letters by writing them in a zigzag pattern.</p>
+                <a href="#" class="btn btn-primary read-more" data-cipher="railfence">Read More</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- You can include additional JavaScript files if needed -->
+
+    <script>
+        $(document).ready(function() {
+            // Define cipher content
+            var cipherContent = {
+                "caesar": "The Caesar cipher is one of the simplest and most widely known encryption techniques.",
+                "vigenere": "The Vigenère cipher is a method of encrypting alphabetic text by using a keyword and rearranging the letters based on the keyword.",
+                "playfair": "The Playfair cipher is a manual symmetric encryption technique and was the first literal digraph substitution cipher.",
+                "railfence": "The rail fence cipher is a transposition cipher that rearranges the plaintext letters by writing them in a zigzag pattern."
+            };
+
+            // Event listener for Read More buttons
+            $(".read-more").click(function() {
+                var cipher = $(this).data("cipher");
+                var content = cipherContent[cipher];
+                alert(content); // Display content in alert (you can change this to a modal or other display method)
+            });
+        });
+    </script>
+</body>
+</html>

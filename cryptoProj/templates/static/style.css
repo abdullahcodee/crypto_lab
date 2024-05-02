@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background-image: url('../assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: left;
+    font-weight: bold; /* make the font bold */
+    color: white; /* set text color to white */
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    margin: 8px 0;
+    display: inline-block;
+    color: white; /* set text color to white */
+    width: auto; /* adjust width to fit content */
+}
+
+.select, .input[type="text"], .textarea {
+    margin: 8px 0;
+    display: inline-block;
+    color: white; /* set text color to white */
+    font-size: 14px; /* reduce font size */
+    padding: 8px; /* reduce padding */
+    width: 100%; /* make the inputs and select elements full width */
+}
+
+/* Style the logo */
+
+.form-control {
+    font-size: 14px;
+    padding: 8px;
+    width: 60%;
+}
+
+#keyField, #shiftField {
+    display: none;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+/* Media queries for responsiveness */
+
+/* Adjust styles for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjust container width for smaller screens */
+    }
+}
+
+/* Adjust styles for screens with a maximum width of 480px */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%; /* Adjust container width for even smaller screens */
+    }
+}
