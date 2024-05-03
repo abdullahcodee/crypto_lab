@@ -5,4 +5,5 @@
     -Columnar transposition cipher
     -AutoKey (not decrypting)
     -polybius square cipher
+    -Rail fence cipher
 -To tell the user what type key to use
