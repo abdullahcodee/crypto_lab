@@ -7,3 +7,4 @@
     -polybius square cipher
     -Rail fence cipher
 -To tell the user what type key to use
+-Capital letter issues when decrypting (optional)
