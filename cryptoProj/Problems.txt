@@ -1,0 +1,8 @@
+-Space issues
+-Refreshing the webapp everytime when the cipher encryption needs to be changed.
+-Ciphers Not working properly:
+    -Affine cipher
+    -Columnar transposition cipher
+    -AutoKey (not decrypting)
+    -polybius square cipher
+-To tell the user what type key to use
