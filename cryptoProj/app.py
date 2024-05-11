@@ -147,74 +147,96 @@ def index():
 
         # Perform the encryption/decryption based on the selected method
         if method == 'caesar':
-            if request.form['action'] == 'encrypt':
-                result = Caesar(shift).encipher(text)
-            else:
-                result = Caesar(shift).decipher(text)
+            if not shift:
+                return "Please provide a Shift value for the Caesar cipher"
+            try:
+                shift = int(shift)
+            except ValueError:
+                return "Invalid Shift value. Shift must be an integer."
         elif method == 'atbash':
             if request.form['action'] == 'encrypt':
                 result = Atbash().encipher(text)
             else:
                 result = Atbash().decipher(text)
-        elif method == 'simple_substitution':
-            key = "ZYXWVUTSRQPONMLKJIHGFEDCBA"
-            if request.form['action'] == 'encrypt':
-                result = SimpleSubstitution(key).encipher(text)
-            else:
-                result = SimpleSubstitution(key).decipher(text)
+        # Other methods...
         elif method == 'affine':
+            try:
+                a, b = map(int, key.split(','))
+            except ValueError:
+                return "Invalid key format for Affine cipher. Key must be in the format 'a,b' where a and b are integers."
             if request.form['action'] == 'encrypt':
                 result = Affine(a, b).encipher(text)
             else:
                 result = Affine(a, b).decipher(text)
+                
+
+        # Continuing from the previous code snippet...
 
         elif method == 'autokey':
+            if not key:
+                return "Please provide a Key for the Autokey cipher. Example key: 'KEY'"
+            if not key.isalpha():
+                return "Invalid Key for Autokey cipher. Key must contain only alphabetic characters."
             if request.form['action'] == 'encrypt':
-                result = Autokey(key).encipher(text)
+                result = ' '.join(Autokey(key).encipher(text).split())
             else:
-                result = Autokey(key).decipher(text)
-        elif method == 'beaufort':
-            if request.form['action'] == 'encrypt':
-                result = Beaufort(key).encipher(text)
-            else:
-                result = Beaufort(key).decipher(text)
+                result = ' '.join(Autokey(key).decipher(text).split())
+
         elif method == 'polybius_square':
             if request.form['action'] == 'encrypt':
                 if len(key) != 25 and len(key) != 36:
                     return "Invalid key for Polybius Square cipher. Key must have a length of 25 (for a 5x5 square) or 36 (for a 6x6 square)."
-                result = PolybiusSquare(key).encipher(text)
-
+                result = ' '.join(PolybiusSquare(key).encipher(text).split())
             else:
                 if len(key) != 25 and len(key) != 36:
                     return "Invalid key for Polybius Square cipher. Key must have a length of 25 (for a 5x5 square) or 36 (for a 6x6 square)."
-                result = PolybiusSquare(key).decipher(text)
+                result = ' '.join(PolybiusSquare(key).decipher(text).split())
+
         elif method == 'playfair':
+            if not key:
+                return "Please provide a Key for the Playfair cipher. Example key: 'KEYWORD'"
+            if not key.isalpha():
+                return "Invalid Key for Playfair cipher. Key must contain only alphabetic characters."
             if request.form['action'] == 'encrypt':
-                result = Playfair(key).encipher(text)
+                result = ' '.join(Playfair(key).encipher(text).split())
             else:
-                result = Playfair(key).decipher(text)
+                result = ' '.join(Playfair(key).decipher(text).split())
+
         elif method == 'rail_fence':
+            if not key:
+                return "Please provide a Key for the Rail Fence cipher. Example key: '3'"
+            if not key.isdigit():
+                return "Invalid Key for Rail Fence cipher. Key must be a positive integer."
             if request.form['action'] == 'encrypt':
-                result = Railfence(key).encipher(text)
+                result = ' '.join(Railfence(int(key)).encipher(text).split())
             else:
-                result = Railfence(key).decipher(text)
+                result = ' '.join(Railfence(int(key)).decipher(text).split())
+
         elif method == 'rot13':
             if request.form['action'] == 'encrypt':
-                result = Rot13().encipher(text)
+                result = ' '.join(Rot13().encipher(text).split())
             else:
-                result = Rot13().decipher(text)
+                result = ' '.join(Rot13().decipher(text).split())
+
         elif method == 'vigenere':
+            if not key:
+                return "Please provide a Key for the Vigenère cipher. Example key: 'KEY'"
+            if not key.isalpha():
+                return "Invalid Key for Vigenère cipher. Key must contain only alphabetic characters."
             if request.form['action'] == 'encrypt':
-                result = Vigenere(key).encipher(text)
+                result = ' '.join(Vigenere(key).encipher(text).split())
             else:
-                result = Vigenere(key).decipher(text)
-    
+                result = ' '.join(Vigenere(key).decipher(text).split())
+
+        # If the method is not recognized
         else:
             result = "Invalid method"
 
         return result
 
+
     return render_template('index.html')
+
 
 if __name__ == '__main__':
     with app.app_context():
