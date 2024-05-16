@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rail Fence Cipher Explanation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-image: url('../assets/background1.png');
+            background-size: cover;
+            background-position: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        p {
+            text-align: justify;
+        }
+        .example {
+            margin-bottom: 20px;
+        }
+        .example h3 {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/signin">Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/signup">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    <div class="container">
+        <h1>Rail Fence Cipher Explanation</h1>
+        <p>
+            The Rail Fence cipher is a transposition cipher that rearranges the plaintext characters in a zigzag pattern across multiple "rails" or lines. It was used by the ancient Greeks, but its modern version is credited to the American Civil War.
+        </p>
+        <p>
+            To encrypt a message using the Rail Fence cipher, the plaintext is written diagonally up and down across a number of "rails" or lines equal to the key. The ciphertext is then formed by reading off the letters in the order they appear.
+        </p>
+        
+        <div class="example">
+            <h3>Example:</h3>
+            <p>
+                Key: <strong>3</strong><br>
+                Plain Text: <strong>HELLO WORLD</strong><br>
+                Encryption Process:<br>
+                <pre>
+                    H . . . O . . . L . . . W . .
+                    . E . L . W . R . D . . O . .
+                    . . L . . . . . . . . . . . .
+                </pre>
+                Encrypted Text: <strong>HO LW RD E LWRDO</strong>
+            </p>
+        </div>
+
+        <p>
+            To decrypt a message encrypted with the Rail Fence cipher, the same number of "rails" or lines used for encryption is drawn, and the ciphertext letters are written in the zigzag pattern. The plaintext is then read off from the diagonals.
+        </p>
+
+        <div class="example">
+            <h3>Example:</h3>
+            <p>
+                Key: <strong>3</strong><br>
+                Encrypted Text: <strong>HO LW RD E LWRDO</strong><br>
+                Decryption Process:<br>
+                <pre>
+                    H . . . O . . . L . . . W . .
+                    . E . L . W . R . D . . O . .
+                    . . L . . . . . . . . . . . .
+                </pre>
+                Plain Text: <strong>HELLO WORLD</strong>
+            </p>
+        </div>
+
+        <p>
+            The Rail Fence cipher is relatively simple and can be easily cracked through brute force or frequency analysis, especially for shorter messages.
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher Explanation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-image: url('../assets/background1.png');
+            background-size: cover;
+            background-position: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        p {
+            text-align: justify;
+        }
+        .example {
+            margin-bottom: 20px;
+        }
+        .example h3 {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/signin">Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/signup">Sign Up</a>
+                </li>
+            </ul>
+    </nav>
+    <div class="container">
+        <h1>Caesar Cipher Explanation</h1>
+        <p>
+            The Caesar cipher is one of the simplest and most widely known encryption techniques. It is a substitution cipher where each letter in the plaintext is shifted a certain number of places down or up the alphabet.
+        </p>
+        <p>
+            For example, with a left shift of 3, 'A' would be replaced by 'X', 'B' would become 'Y', and so on.
+        </p>
+        
+        <div class="example">
+            <h3>Example:</h3>
+            <p>
+                Plain Text: <strong>HELLO</strong><br>
+                Shift: <strong>3</strong><br>
+                Encrypted Text: <strong>KHOOR</strong>
+            </p>
+        </div>
+
+        <p>
+            Decryption works in the same way, but it shifts the letters in the opposite direction. To decrypt a message, you simply use the same shift value in the opposite direction.
+        </p>
+
+        <div class="example">
+            <h3>Example:</h3>
+            <p>
+                Encrypted Text: <strong>KHOOR</strong><br>
+                Shift: <strong>3</strong><br>
+                Decrypted Text: <strong>HELLO</strong>
+            </p>
+        </div>
+
+        <p>
+            The Caesar cipher is named after Julius Caesar, who is said to have used it to communicate with his officials. Despite its simplicity, it is still used in modern cryptography, often as part of more complex encryption algorithms.
+        </p>
+    </div>
+</body>
+</html>

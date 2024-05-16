@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigenère Cipher Explanation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-image: url('../assets/background1.png');
+            background-size: cover;
+            background-position: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        p {
+            text-align: justify;
+        }
+        .example {
+            margin-bottom: 20px;
+        }
+        .example h3 {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/blogs">Blogs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/signin">Sign In</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/signup">Sign Up</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>Vigenère Cipher Explanation</h1>
+        <p>
+            The Vigenère cipher is a method of encrypting alphabetic text by using a simple form of polyalphabetic substitution. It uses a keyword to shift the plaintext letters.
+        </p>
+        <p>
+            The Vigenère cipher uses a keyword to determine the shift for each letter in the plaintext. The keyword is repeated to match the length of the plaintext.
+        </p>
+        
+        <div class="example">
+            <h3>Example:</h3>
+            <p>
+                Plain Text: <strong>HELLO</strong><br>
+                Keyword: <strong>KEY</strong><br>
+                Encrypted Text: <strong>RIJVS</strong>
+            </p>
+        </div>
+
+        <p>
+            To decrypt a message encrypted with the Vigenère cipher, you need to know the keyword used for encryption. The decryption process involves reversing the encryption process.
+        </p>
+
+        <div class="example">
+            <h3>Example:</h3>
+            <p>
+                Encrypted Text: <strong>RIJVS</strong><br>
+                Keyword: <strong>KEY</strong><br>
+                Decrypted Text: <strong>HELLO</strong>
+            </p>
+        </div>
+
+        <p>
+            The Vigenère cipher is more secure than the Caesar cipher because it uses a keyword to determine the shifting, making it harder to break. However, it can still be broken using various cryptanalysis techniques.
+        </p>
+    </div>
+</body>
+</html>

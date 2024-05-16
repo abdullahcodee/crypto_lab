@@ -48,28 +48,28 @@
             <div class="card-body">
                 <h5 class="card-title">Caesar Cipher</h5>
                 <p class="card-text">The Caesar cipher is one of the simplest and most widely known encryption techniques.</p>
-                <a href="#" class="btn btn-primary read-more" data-cipher="caesar">Read More</a>
+                <a href="/caesar" class="btn btn-primary read-more" data-cipher="caesar">Read More</a>
             </div>
         </div>
         <div class="card mt-3">
             <div class="card-body">
                 <h5 class="card-title">Vigenere Cipher</h5>
                 <p class="card-text">The Vigenère cipher is a method of encrypting alphabetic text by using a keyword and rearranging the letters based on the keyword.</p>
-                <a href="#" class="btn btn-primary read-more" data-cipher="vigenere">Read More</a>
+                <a href="/Vigenere" class="btn btn-primary read-more" data-cipher="vigenere">Read More</a>
             </div>
         </div>
         <div class="card mt-3">
             <div class="card-body">
                 <h5 class="card-title">Playfair Cipher</h5>
                 <p class="card-text">The Playfair cipher is a manual symmetric encryption technique and was the first literal digraph substitution cipher.</p>
-                <a href="#" class="btn btn-primary read-more" data-cipher="playfair">Read More</a>
+                <a href="/Playfair" class="btn btn-primary read-more" data-cipher="playfair">Read More</a>
             </div>
         </div>
         <div class="card mt-3">
             <div class="card-body">
                 <h5 class="card-title">Rail Fence Cipher</h5>
                 <p class="card-text">The rail fence cipher is a transposition cipher that rearranges the plaintext letters by writing them in a zigzag pattern.</p>
-                <a href="#" class="btn btn-primary read-more" data-cipher="railfence">Read More</a>
+                <a href="/RailFence" class="btn btn-primary read-more" data-cipher="railfence">Read More</a>
             </div>
         </div>
     </div>
@@ -78,23 +78,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <!-- You can include additional JavaScript files if needed -->
 
-    <script>
-        $(document).ready(function() {
-            // Define cipher content
-            var cipherContent = {
-                "caesar": "The Caesar cipher is one of the simplest and most widely known encryption techniques.",
-                "vigenere": "The Vigenère cipher is a method of encrypting alphabetic text by using a keyword and rearranging the letters based on the keyword.",
-                "playfair": "The Playfair cipher is a manual symmetric encryption technique and was the first literal digraph substitution cipher.",
-                "railfence": "The rail fence cipher is a transposition cipher that rearranges the plaintext letters by writing them in a zigzag pattern."
-            };
-
-            // Event listener for Read More buttons
-            $(".read-more").click(function() {
-                var cipher = $(this).data("cipher");
-                var content = cipherContent[cipher];
-                alert(content); // Display content in alert (you can change this to a modal or other display method)
-            });
-        });
-    </script>
 </body>
 </html>

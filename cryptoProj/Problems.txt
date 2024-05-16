@@ -1,10 +1,10 @@
 -Space issues
 -Refreshing the webapp everytime when the cipher encryption needs to be changed.
 -Ciphers Not working properly:
-    -Affine cipher
-    -Columnar transposition cipher
-    -AutoKey (not decrypting)
-    -polybius square cipher
-    -Rail fence cipher
+    -Affine cipher -> fixed
+    -Columnar transposition cipher -> cipher removed
+    -AutoKey (not decrypting) - > remoced
+    -polybius square cipher - > cipher removed
+    -Rail fence cipher -> fixed
 -To tell the user what type key to use
 -Capital letter issues when decrypting (optional)
